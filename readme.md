@@ -58,7 +58,7 @@ tinke+glob.bin插件
 
 # 取字定位
 
-因为font文件位于Glob压缩包内，无法直接定位
+因为font文件位于Glob.bin压缩包内，无法直接定位
 
 故出现文字之后暂停dump，搜索font文件二进制代码+0x2000000定位，ida逆向分析。
 
