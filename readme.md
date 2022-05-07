@@ -22,6 +22,7 @@ tinke+glob.bin插件
 # 文本定位
 
 通过文件名判断，锁定Strings\_xx.strings。
+
 替换Strings\_us.strings为Strings\_FC.strings并启动游戏测试，可以看到语言变更为法语，因此确定文本位于Strings\_xx.strings.
 
 
@@ -37,10 +38,15 @@ tinke+glob.bin插件
 ## huffman 压缩
 
 最终文本存放至22bcfc0
+
 文本指针：22bf24c+偏移量存放偏移量，22c0b2c（fd545abf）存放 huffman 压缩后字节
+
 取一字节0 1展开，按比特逐位判断
+
 22bf0b4（00006501） 处存放 huffman 树，四字节一组，前两字节左子树，后两字节右子树
+
 大于100代表继续往下寻找，否则为目标编码
+
 遇到00终止符结束
 
 自动化解密详见代码getText.py
