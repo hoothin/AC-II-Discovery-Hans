@@ -31,6 +31,7 @@ tinke+glob.bin插件
 # 文本解密
 
 文本通过差值搜索无法找到，猜想文本经过加密，启动游戏运行至文字出现，Dump出内存再次进行差值搜索，定位至解密文本存储位置。
+
 ![Debuger](Debuger.jpg)
 
 在此位置添加写入断点，定位至加密程序。可知算法：
@@ -53,6 +54,7 @@ tinke+glob.bin插件
 遇到00终止符结束
 
 自动化解密详见代码getText.py
+
 ![huffman](Huffman.png)
 
 <a id="org82c9747"></a>
@@ -62,6 +64,7 @@ tinke+glob.bin插件
 因为font文件位于Glob.bin压缩包内，无法直接定位
 
 故出现文字之后暂停dump，搜索font文件二进制代码+0x2000000定位，ida逆向分析。
+
 ![IDA](IDA.jpg)
 
 最终得知取字模子程序位于200F018，取编码值在0200F03A，为半字读取，支持双字节。
