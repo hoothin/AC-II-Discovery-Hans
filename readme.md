@@ -55,6 +55,8 @@ tinke+glob.bin插件
 
 自动化解密详见代码 [getText.py](getText.py)
 
+解密后文本见 [langText.csv](langText.csv)
+
 ![huffman](Huffman.png)
 
 <a id="org82c9747"></a>
