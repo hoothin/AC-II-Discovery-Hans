@@ -32,10 +32,9 @@ tinke+glob.bin插件
 
 文本通过差值搜索无法找到，猜想文本经过加密，启动游戏运行至文字出现，Dump出内存再次进行差值搜索，定位至解密后文本的存储位置。
 
-![Debuger](Debuger.jpg)
-
 在此位置添加写入断点，定位至加密子程序。可知算法：
 
+![Debuger](Debuger.jpg)
 
 <a id="org0e4a200"></a>
 
